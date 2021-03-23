@@ -1,0 +1,55 @@
+﻿@page "/"
+
+@inject Digester Digester
+@inject IConfiguration Configuration
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+<div>
+
+        <label class="col-form-label">
+            Inserisci il numero di telefono:
+            <input type="text" @bind="PhoneInput" />
+        </label>
+        <button class="btn-info" @onclick="Submit">Submit</button>
+
+</div>
+<br />
+<div>
+    <p> <label>Result: </label>@Result</p>
+    <p> <label>Id: </label>@Id</p>
+    <p> <label>Phone: </label>@Phone</p>
+</div>
+
+
+@code
+{
+    public Dictionary<string, string> AcceptanceRules { get; set; }
+
+    private string PhoneInput;
+    public string Id;
+    public string Phone;
+    public string Result;
+
+    protected override void OnInitialized()
+    {
+        if (Digester == null)
+            Digester = new Digester();
+        var digesterOptions = new DigesterOptions();
+        Configuration.GetSection(DigesterOptions.PhoneParser).Bind(digesterOptions);
+        Digester.AcceptanceRules = digesterOptions.AcceptanceRules;
+        Digester.CorrectionRules = digesterOptions.CorrectionRules;
+    }
+
+    private  void Submit()
+    {
+        Digester.PhoneRecords.Add(new PhoneRecord { Input = PhoneInput });
+        var record = new PhoneRecord { Input = PhoneInput };
+        record = Digester.DigestRecord(record);
+        Phone = record.Phone;
+        Id = record.Id;
+        Result = record.Result;
+    }
+
+}
