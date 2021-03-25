@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumberParser", "PhoneNumberParser\PhoneNumberParser.csproj", "{EF82F559-BC4F-4813-92F6-2632C6F9257F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumberParser", "PhoneNumberParser\PhoneNumberParser.csproj", "{EF82F559-BC4F-4813-92F6-2632C6F9257F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneParser", "PhoneParser\PhoneParser.csproj", "{709226D6-732A-40EC-9BA8-F1CDB20A0AD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneParser", "PhoneParser\PhoneParser.csproj", "{A147F2CA-F947-4B17-91D0-BE3D44981496}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{EF82F559-BC4F-4813-92F6-2632C6F9257F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF82F559-BC4F-4813-92F6-2632C6F9257F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF82F559-BC4F-4813-92F6-2632C6F9257F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{709226D6-732A-40EC-9BA8-F1CDB20A0AD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{709226D6-732A-40EC-9BA8-F1CDB20A0AD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{709226D6-732A-40EC-9BA8-F1CDB20A0AD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{709226D6-732A-40EC-9BA8-F1CDB20A0AD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A147F2CA-F947-4B17-91D0-BE3D44981496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A147F2CA-F947-4B17-91D0-BE3D44981496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A147F2CA-F947-4B17-91D0-BE3D44981496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A147F2CA-F947-4B17-91D0-BE3D44981496}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

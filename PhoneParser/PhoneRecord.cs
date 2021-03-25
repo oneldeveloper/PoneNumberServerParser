@@ -1,5 +1,8 @@
 ﻿namespace PhoneParser
 {
+    /// <summary>
+    /// Record che contiene le informazioni di ingresso e di risultato di processo
+    /// </summary>
     public class PhoneRecord
     {
         /// <summary>

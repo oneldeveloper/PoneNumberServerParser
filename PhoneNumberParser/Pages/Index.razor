@@ -3,29 +3,37 @@
 @inject Digester Digester
 @inject IConfiguration Configuration
 
-<h1>Hello, world!</h1>
+<h1>Verifica numero telefonico</h1>
 
-Welcome to your new app.
+
 <div>
-
-        <label class="col-form-label">
-            Inserisci il numero di telefono:
-            <input type="text" @bind="PhoneInput" />
-        </label>
-        <button class="btn-info" @onclick="Submit">Submit</button>
-
+    <p>Inserisci numero telefonico con formato</p>
+    <ul>
+        <li>id,telefono</li>    
+    </ul>
+</div>
+<div>
+    <label class="col-form-label">
+        Inserisci il numero di telefono:
+        <input type="text" @bind="PhoneInput" />
+    </label>
+    <button class="btn-info" @onclick="Submit">Submit</button>
+    <br />
+    <p> <label>Risultato: </label><b>@Result</b></p>
+    <p> <label>Id: </label><b>@Id</b></p>
+    <p> <label>Phone: </label><b>@Phone</b></p>
 </div>
 <br />
+<br />
 <div>
-    <p> <label>Result: </label>@Result</p>
-    <p> <label>Id: </label>@Id</p>
-    <p> <label>Phone: </label>@Phone</p>
+    <h3>Utilizzo della API</h3>
+    <p>Indirizzo: /api/phoneparser</p>
+    <p>Inserire il file binario da processare allegato nel body.</p>
 </div>
 
 
 @code
 {
-    public Dictionary<string, string> AcceptanceRules { get; set; }
 
     private string PhoneInput;
     public string Id;
@@ -40,9 +48,10 @@ Welcome to your new app.
         Configuration.GetSection(DigesterOptions.PhoneParser).Bind(digesterOptions);
         Digester.AcceptanceRules = digesterOptions.AcceptanceRules;
         Digester.CorrectionRules = digesterOptions.CorrectionRules;
+        Digester.AllOtherRules = digesterOptions.AllOtherRules;
     }
 
-    private  void Submit()
+    private void Submit()
     {
         Digester.PhoneRecords.Add(new PhoneRecord { Input = PhoneInput });
         var record = new PhoneRecord { Input = PhoneInput };
