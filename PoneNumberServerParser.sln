@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumberParser", "PhoneNumberParser\PhoneNumberParser.csproj", "{EF82F559-BC4F-4813-92F6-2632C6F9257F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneParser", "PhoneParser\PhoneParser.csproj", "{A147F2CA-F947-4B17-91D0-BE3D44981496}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneParser", "PhoneParser\PhoneParser.csproj", "{A147F2CA-F947-4B17-91D0-BE3D44981496}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F6FD6C66-F97A-4A56-A37D-89E503D5C3D0}"
+	ProjectSection(SolutionItems) = preProject
+		readme.txt = readme.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
